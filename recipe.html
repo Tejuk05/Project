@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Cuisine Explorer</title>
+    <style>
+        body {
+            background-color: #f9fafb;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header,
+        nav,
+        main,
+        footer {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #222;
+        }
+
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header div {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header img {
+            width: 50px;
+        }
+
+        header h1 {
+            font-size: 26px;
+            margin: 0;
+        }
+
+        header input[type="text"] {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            width: 280px;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #0056b3;
+        }
+
+        .glide img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .glide>div {
+            margin-top: 20px;
+        }
+
+        .glide h2 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .glide p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .glide button {
+            margin-top: 10px;
+        }
+
+        section {
+            margin: 60px 0;
+        }
+
+        select {
+            padding: 10px;
+            margin: 10px 10px 20px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        section div>div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        section img {
+            border-radius: 10px;
+            width: 100%;
+            max-width: 300px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section>div>div>div {
+            max-width: 600px;
+        }
+
+        section h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        section p {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            font-weight: 500;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 6px;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 30px 20px;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+        }
+
+        footer ul li {
+            margin: 8px 0;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        footer a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="https://ai-public.creatie.ai/gen_page/logo_placeholder.png" alt="World Cuisine">
+            <h1>World Cuisine Explorer</h1>
+        </div>
+        <div>
+            <input type="text" placeholder="Search cuisines, regions, or dishes...">
+        </div>
+    </header>
+
+    <nav>
+        <a href="#">All Regions</a>
+        <a href="#">Asia</a>
+        <a href="#">Europe</a>
+        <a href="#">Americas</a>
+        <a href="#">Africa</a>
+        <a href="#">Middle East</a>
+        <a href="#">Oceania</a>
+    </nav>
+
+    <main>
+        <section>
+            <div class="glide">
+                <div data-glide-el="track">
+                    <ul>
+                        <li>
+                            <div>
+                                <img src="https://creatie.ai/ai/api/search-image?query=A%20stunning%20traditional%20Japanese%20sushi%20platter..."
+                                    alt="Japanese Cuisine">
+                                <div>
+                                    <h2>Japanese Cuisine</h2>
+                                    <p>Discover the artistry and tradition of Japanese cooking, from delicate sushi to
+                                        hearty ramen.</p>
+                                    <button>Explore Japanese Cuisine</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div data-glide-el="controls[nav]">
+                    <button data-glide-dir="=0">●</button>
+                    <button data-glide-dir="=1">●</button>
+                    <button data-glide-dir="=2">●</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2>Popular Regions</h2>
+                <div>
+                    <select>
+                        <option>All Continents</option>
+                        <option>Asia</option>
+                        <option>Europe</option>
+                        <option>Americas</option>
+                    </select>
+                    <select>
+                        <option>All Cuisines</option>
+                        <option>Traditional</option>
+                        <option>Modern</option>
+                        <option>Fusion</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <img src="https://creatie.ai/ai/api/search-image?query=A%20vibrant%20Italian%20pasta%20dish..."
+                        alt="Italian Cuisine">
+                    <div>
+                        <h3>Italian Cuisine</h3>
+                        <p>Home of pasta, pizza, and Mediterranean flavors</p>
+                        <div>
+                            <span>320 Recipes</span>
+                            <button>Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Cultural Spotlight: Thai Cuisine</h2>
+            <div>
+                <div>
+                    <img src="https://creatie.ai/ai/api/search-image?query=A%20beautifully%20presented%20Thai%20green%20curry..."
+                        alt="Thai Cuisine">
+                </div>
+                <div>
+                    <h3>The Art of Thai Cooking</h3>
+                    <p>Thai cuisine is renowned for its delicate balance of sweet, sour, salty, and spicy flavors.</p>
+                    <div>
+                        <div>
+                            <h4>Key Ingredients</h4>
+                            <ul>
+                                <li>Lemongrass</li>
+                                <li>Kaffir Lime</li>
+                                <li>Thai Basil</li>
+                                <li>Coconut Milk</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Cooking Methods</h4>
+                            <ul>
+                                <li>Stir-frying</li>
+                                <li>Steaming</li>
+                                <li>Grilling</li>
+                                <li>Curry Making</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button>Explore Thai Recipes</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div>
+        <h3>Explore Regions</h3>
+        <ul>
+            <li><a href="#">Asian Cuisine</a></li>
+            <li><a href="#">European Cuisine</a></li>
+            <li><a href="#">American Cuisine</a></li>
+            <li><a href="#">African Cuisine</a></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

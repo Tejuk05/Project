@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desi - Home</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .website-name {
+            font-size: 1.5em;
+            margin-right: 20px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-right a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .hero {
+            background-color: #e0f7fa;
+        }
+
+        .features {
+            background-color: #f8f8f8;
+        }
+
+        .cta {
+            background-color: #fff3e0;
+        }
+
+        footer {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #f0f0f0;
+                padding: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .search-bar {
+                display: none;
+            }
+
+            .header-right a {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <span class="website-name">Desi</span>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="/favorites">Favorites</a>
+            <a href="/cart">Cart</a>
+            <a href="/profile">Profile</a>
+            <span class="menu-icon">&#9776;</span>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h2>Welcome to Desi - Your Gateway to Cultural Treasures</h2>
+        <p>Explore a vibrant collection of authentic Desi products and experiences. Join our community and celebrate the
+            rich heritage.</p>
+        <a href="/products" class="button">Discover Our Products</a>
+    </section>
+
+    <section class="features">
+        <h2>Why Choose Desi?</h2>
+        <div class="feature-item">
+            <h3>Authenticity Guaranteed</h3>
+            <p>We ensure that every product reflects the true essence of Desi culture.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Curated Selection</h3>
+            <p>Our experts handpick unique items that celebrate the diversity of Desi traditions.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Community Focus</h3>
+            <p>Join a community of enthusiasts and share your passion for Desi culture.</p>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to Begin Your Desi Journey?</h2>
+        <p>Create an account and immerse yourself in a world of cultural richness.</p>
+        <a href="/register" class="button">Sign Up Today</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Desi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navUl = document.querySelector('nav ul');
+
+        menuIcon.addEventListener('click', () => {
+            navUl.classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>
